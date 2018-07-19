@@ -1,0 +1,31 @@
+<!--pages/mine/mine.wxml-->
+
+<view class="userinfo">
+
+
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <view class='info'>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+</view>
+<view class="center">
+  <view class="info_list">
+    <block wx:for="{{userListInfo}}">
+      <view class="weui_cell"  bindtap='itemClick' id='{{index}}'>
+        <view class="weui_cell_hd">
+          <image src="{{item.icon}}"></image>
+        </view>
+        <view class="weui_cell_bd">
+          <view class="weui_cell_bd_p"> {{item.text}} </view>
+        </view>
+        <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
+
+        <image wx:if='{{item.isnext}}' src='{{next}}' mode="scaleToFill" class='nextimg'></image>
+
+        <view class="with_arrow"></view>
+      </view>
+    </block>
+  </view>
+</view>

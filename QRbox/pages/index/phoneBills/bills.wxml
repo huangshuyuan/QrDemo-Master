@@ -1,0 +1,25 @@
+<!--pages/index/phoneBills/bills.wxml-->
+ <scroll-view scroll-y="true" class="container">
+	<block wx:for="{{mydata}}" wx:key="unique">
+  
+		<view class="block" bindtap="playTap" data-id="{{item.id}}">
+			<view class="left">
+				<image src="{{item.picUrl}}" mode="aspectFill"/>
+			</view>
+			<view class="center">
+				<view class="content">
+					<view>
+						<text class="center-name">{{item.name}}</text>	
+					</view>
+					<view>
+						<text class="center-time">{{item.time}} </text>
+					</view>
+				</view>
+				<view class="right">
+					<text class="righttext">{{item.money}}</text> 
+				</view>
+			</view>
+		</view>	
+	</block>
+  </scroll-view> 
+

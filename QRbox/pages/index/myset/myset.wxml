@@ -1,0 +1,80 @@
+<!--pages/index/myset/myset.wxml-->
+<view class="tab">
+  <view class="tab-item tab-item-active" bindtap="tabItemTap" data-view="1" wx:if="{{mainView==1}}">套餐使用明细</view>
+  <view class="tab-item" data-view="1" bindtap="tabItemTap" wx:if="{{mainView!=1}}">套餐使用明细</view>
+  <view class="tab-item tab-item-active" bindtap="tabItemTap" data-view="2" wx:if="{{mainView==2}}">套餐激活记录</view>
+  <view class="tab-item" data-view="2" bindtap="tabItemTap" wx:if="{{mainView!=2}}">套餐激活记录</view>
+  <view class="tab-item tab-item-active" bindtap="tabItemTap" data-view="3" wx:if="{{mainView==3}}">套餐转移记录</view>
+  <view class="tab-item" data-view="3" bindtap="tabItemTap" wx:if="{{mainView!=3}}">套餐转移记录</view>
+</view>
+<view hidden="{{mainView != 1}}">
+  <block wx:for="{{mydata}}" wx:key="unique">
+  
+		<view class="block" bindtap="playTap" data-id="{{item.id}}">
+			<view class="left">
+				<image src="{{item.picUrl}}" mode="aspectFill"/>
+			</view>
+			<view class="center">
+				<view class="content">
+					<view>
+						<text class="center-name">{{item.name}}</text>	
+					</view>
+					<view>
+						<text class="center-time">{{item.time}} </text>
+					</view>
+				</view>
+				<view class="right">
+					<text class="righttext">{{item.money}}</text> 
+				</view>
+			</view>
+		</view>	
+	</block>
+</view>
+<!-- 套餐激活记录 -->
+<view class="top-view" hidden="{{mainView != 2}}">
+  <block wx:for="{{mydata}}" wx:key="unique">
+  
+		<view class="block" bindtap="playTap" data-id="{{item.id}}">
+			<view class="left">
+				<image src="{{item.picUrl}}" mode="aspectFill"/>
+			</view>
+			<view class="center">
+				<view class="content">
+					<view>
+						<text class="center-name">2 {{item.name}}</text>	
+					</view>
+					<view>
+						<text class="center-time">2 {{item.time}} </text>
+					</view>
+				</view>
+				<view class="right">
+					<text class="righttext">{{item.money}}</text> 
+				</view>
+			</view>
+		</view>	
+	</block>
+</view>
+<!--套餐转移记录-->
+<view hidden="{{mainView != 3}}">
+   <block wx:for="{{mydata}}" wx:key="unique">
+  
+		<view class="block" bindtap="playTap" data-id="{{item.id}}">
+			<view class="left">
+				<image src="{{item.picUrl}}" mode="aspectFill"/>
+			</view>
+			<view class="center">
+				<view class="content">
+					<view>
+						<text class="center-name">3 {{item.name}}</text>	
+					</view>
+					<view>
+						<text class="center-time">3 {{item.time}} </text>
+					</view>
+				</view>
+				<view class="right">
+					<text class="righttext">{{item.money}}</text> 
+				</view>
+			</view>
+		</view>	
+	</block>
+</view>

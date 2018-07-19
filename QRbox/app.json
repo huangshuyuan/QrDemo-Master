@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/index/phoneData/data",
+    "pages/index/phoneBills/bills",
+    "pages/index/recharge/recharge",
+    "pages/index/myset/myset",
+    "pages/index/myDevice/device",
+    "pages/mine/setting/setting",
+    "pages/mine/setting/systeminfo/systeminfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#09a6d9",
+    "navigationBarTitleText": "奇瑞Box",
+    "navigationBarTextStyle": "light",
+    "backgroundTextColor": "#09a6d9",
+    "backgroundColor": "#F5F5F5"
+  },
+  "tabBar": {
+    "selectedColor": "#09a6d9",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/home_n.png",
+        "selectedIconPath": "image/home.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "image/icon_mine_n.png",
+        "selectedIconPath": "image/icon_mine.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 100000
+  },
+  "debug": true
+}

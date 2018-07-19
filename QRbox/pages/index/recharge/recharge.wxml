@@ -1,0 +1,23 @@
+<!--pages/index/recharge/recharge.wxml-->
+<view class='top'>充值中心</view>
+<view class='row'>
+  <block wx:for="{{mydata}}" >
+    <view class="item {{index == currentIndex ? 'active' : ''}}" bindtap='itemClick' id='{{index}}'  >
+      <text  >{{item.name}}</text>
+    </view>
+  </block>
+</view>
+
+<view class="tool-bar">
+  <view>
+    <view class='bar-money'>
+      <text class="bar-money-1"> 金额:</text>
+      <text class="bar-money-2"> ¥{{price}}</text>
+    </view>
+    <view class='button-view'>
+       <a  class="pay-button"> 立刻支付 </a>
+    </view>
+ 
+  </view>
+
+</view>

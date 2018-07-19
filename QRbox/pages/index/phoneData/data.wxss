@@ -1,0 +1,200 @@
+/* pages/index/phonedata/data.wxss */
+
+/*
+display: flex; 
+align-items: center;
+ */
+
+.circleView {
+  display: flex;
+  align-items: center;
+}
+
+/*
+
+
+margin-left: 33.5rpx;
+*/
+
+.white-Circle {
+  background: #09a6d9;
+  height: 400rpx;
+  width: 400rpx;
+  border-radius: 300rpx;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+.red-circle {
+  background: white;
+  height: 360rpx;
+  width: 360rpx;
+  border-radius: 280rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.text-view {
+  height: 360rpx;
+  width: 360rpx;
+  color: #09a6d9;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+text {
+  margin-bottom: 40rpx;
+  height: 30rpx;
+}
+
+.first-text {
+  margin-top: 130rpx;
+}
+
+.right-view {
+  height: 360rpx;
+  width: 360rpx;
+  margin-left: 450rpx;
+  margin-top: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  font-size: 30rpx;
+}
+
+.right-view image {
+  width: 20px;
+  height: 20px;
+}
+
+.right-view-item {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+}
+
+.right-view-item view {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-name {
+  margin-left: 10px;
+  align-items: left;
+}
+
+.item-value {
+  font-size: 40rpx;
+  color: orange;
+  margin-left: 30px;
+}
+
+/* 按钮样式 */
+
+.myButton {
+  margin-top: 160rpx;
+  background-color: #09a6d9;
+  border-radius: 25px;
+  border: 1px solid #19abab;
+  display: inline-block;
+  color: #fff;
+  font-family: Arial;
+  font-size: 30rpx;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+.myButton:hover {
+  background-color: #09a6d9;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+  border-radius: 25px;
+  background-color: #09a6d9;
+}
+
+/*bottom-view  */
+
+/* .bottom-view{
+  margin-top: 180rpx;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #eee;
+} */
+
+.title {
+  margin-top: 180rpx;
+  width: 100%;
+  height: 50rpx;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 35rpx;
+  padding: 10px;
+  background: #eee;
+  box-shadow: #ddd 0px 2px 15px 1px;
+}
+
+.bottom-view {
+  float: center;
+}
+
+.item-view {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 150rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.center {
+  flex: 1;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.content {
+  padding: 10rpx;
+  height: 100%;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.right {
+  height: 100%;
+  box-sizing: border-box;
+  margin-right: 20rpx;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right text {
+  color: #09a6d9;
+}
+
+.content view {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.center-name {
+  font-size: 30rpx;
+}
+
+.center-time {
+  font-size: 25rpx;
+  color: #999;
+}

@@ -1,0 +1,29 @@
+<!--index.wxml-->
+
+<loading hidden="{{loading}}">
+  加载中...
+</loading>
+<view class='main'>
+
+  <swiper style='height:400rpx;'
+   indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindchange">
+    <block wx:for="{{slider}}" wx:key="unique">
+      <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}" bindtap="swiperClick">
+        <image src='{{item.picUrl}}' class='img' mode='aspectToFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--仿京东  -->
+
+  <view class="itemview">
+    <block wx:for-items="{{logos}}">
+      <view class="logoinfo" bindtap='listitemClick' id='{{index}}'>
+        <image style="width:80rpx; height:80rpx;" src="{{item.image}}" mode="aspectFit" />
+        <text class="logotext">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+
+
+
+</view>

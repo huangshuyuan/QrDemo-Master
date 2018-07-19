@@ -1,0 +1,53 @@
+<!--pages/index/phonedata/data.wxml-->
+<view>
+  <view class="circle circleView">
+    <view class="white-Circle">
+      <view class="red-circle">
+        <view class="text-view">
+          <text class="first-text">当月剩余流量</text>
+          <text style='font-size: 40rpx;color:red;'>1030M</text>
+          <a  bindtap="clickData" class="myButton">买流量</a>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="right-view">
+    <view class="right-view-item">
+      <view>
+        <image src='{{image1}}' mode="aspectFill"></image>
+        <text class="item-name">当月使用流量</text>
+      </view>
+      <text class="item-value">100M</text>
+    </view>
+
+    <view class="right-view-item">
+      <view>
+        <image src='{{image2}}' mode="aspectFill"></image>
+        <text class="item-name">平均网速</text>
+      </view>
+      <text class="item-value">10M/s</text>
+    </view>
+  </view>
+</view>
+<view class='bottom-view'></view>
+<view class='title'>流量使用详情</view>
+<view class='bottom-view'>
+  <block wx:for="{{mydata}}">
+    <view class='item-view'>
+      <view class="center">
+        <view class="content">
+          <view>
+            <text class="center-name">{{item.name}}</text>
+          </view>
+          <view>
+            <text class="center-time">{{item.time}} </text>
+          </view>
+        </view>
+        <view class="right">
+          <text class="righttext">{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
